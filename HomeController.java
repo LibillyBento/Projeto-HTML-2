@@ -1,8 +1,11 @@
 package com.example.demo;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 
@@ -21,11 +24,25 @@ public class HomeController {
 		return "signin";
 	}
 
-	@GetMapping("/dashboard")
-	public String dashboard(Model model) {
-		model.addAttribute("nome", "Othon Campos");
-
-		return "dashboard";
+	@PostMapping("/dashboard")
+	public String dashboard(HttpServletRequest request,Model model) {
+		String Usuario = request.getParameter("Usuario");
+		String Senha = request.getParameter("Senha");
+		
+		System.out.println("Usuario:" +Usuario);
+		System.out.println("Senha:" + Senha);
+		
+		if(Senha.equals ("12345678")) {
+			model.addAttribute("nome", Usuario);
+			model.addAttribute("descricao", "Viajar");
+			return "dashboard";
+		}
+		
+		else {
+			model.addAttribute("mensagem", "Senha inválida");
+			return "erro";
+			
+		}
 	}
 
 	@GetMapping("/signup")
@@ -38,6 +55,10 @@ public class HomeController {
 
 		return "quemsou";
 	}
-	
-}
+	@GetMapping("/cadastrado")
+	public String cadastrado() {
 
+		return "cadastrado";
+	}
+
+}
