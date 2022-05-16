@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <!-- Mirrored from themepixels.com/demo/webpage/chain/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:22:35 GMT -->
 <head>
         <meta charset="utf-8">
@@ -20,10 +20,10 @@
     </head>
 
     <body class="signin">
-        
-        
+
+
         <section>
-            
+
             <div class="panel panel-signin">
                 <div class="panel-body">
                     <div class="logo text-center">
@@ -32,19 +32,19 @@
                     <br />
                     <h4 class="text-center mb5">Possui cadastro?</h4>
                     <p class="text-center">Entre em sua conta</p>
-                    
+
                     <div class="mb30"></div>
-                    
-                    <form action="/dashboard" method="get">
+
+                    <form action="/dashboard" method="post">
                         <div class="input-group mb15">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Usuário">
+                            <input name ="Usuario" id="Usuario" type="text" class="form-control" placeholder="Usuario">
                         </div><!-- input-group -->
                         <div class="input-group mb15">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-							<input type="password" class="form-control" placeholder="Senha">
+							<input name ="Senha" id="Senha" type="password" class="form-control" placeholder="Senha">
 							</div><!-- input-group -->
-							
+
 							<div class="clearfix">
 								<div class="pull-left">
 									<a href="/" class="btn btn-info btn-block">
@@ -56,15 +56,15 @@
 								</div>
 							</div>
 							</form>
-							
+
 							</div><!-- panel-body -->
 							<div class="panel-footer">
 								<a href="/signup" class="btn btn-primary btn-block">Não é um membro? Crie uma conta agora</a>
 					</div><!-- panel-footer -->
 				</div><!-- panel -->
-						
+
 						</section>
-							
+
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/jquery-migrate-1.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
