@@ -61,4 +61,10 @@ public class HomeController {
 		return "cadastrado";
 	}
 
+	@GetMapping("/cadastro_livro")
+	public String cadastro_livro() {
+
+		return "cadastro_livro";
+
+	}
 }
