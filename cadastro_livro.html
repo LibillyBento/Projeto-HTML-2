@@ -209,52 +209,56 @@
                                             <a href="#" class="panel-minimize tooltips" data-toggle="tooltip" title="Minimize Panel"><i class="fa fa-minus"></i></a>
                                             <a href="#" class="panel-close tooltips" data-toggle="tooltip" title="Close Panel"><i class="fa fa-times"></i></a>
                                         </div><!-- panel-btns -->
-                                        <h4 class="panel-title">Input Fields</h4>
-                                        <p>Individual form controls automatically receive some global styling. All textual elements with <code>.form-control</code> are set to width: 100%; by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+                                        <h4 class="panel-title">Cadastro de livro</h4>
+                                        <p>Cadastre o livro preenchendo todas as informações solicitadas abaixo.</p>
                                     </div><!-- panel-heading -->
-                                    
+                                
                                     <div class="panel-body nopadding">
           
-                                        <form class="form-horizontal form-bordered">
+                                        <form action="/process_cadastro_livro"method="post" class="form">
                                             <div class="form-group">
                                                 <label class="col-sm-4 control-label">Título</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" placeholder="Título" class="form-control" />
+                                                    <input type="text" placeholder="Digite o título" class="form-control" />
                                                 </div>
                                             </div><!-- form-group -->
                     
                                             <div class="form-group">
                                                 <label class="col-sm-4 control-label" for="disabledinput">Subtítulo</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" placeholder="Subtítulo" id="disabledinput" class="form-control" />
+                                                    <input type="text" placeholder="Digite o subtítulo" class="form-control" />
                                                 </div>
                                             </div><!-- form-group -->
                     
                                             <div class="form-group">
                                                 <label class="col-sm-4 control-label" for="readonlyinput">Autor</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" value="Autor" id="readonlyinput" class="form-control" />
+                                                    <input type="text" placeholder="Digite o nome do autor" id="readonlyinput" class="form-control" />
+                                                </div>
+                                            </div><!-- form-group -->
+                                            
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label" for="readonlyinput">Editora</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" placeholder="Digite o nome da editora" id="readonlyinput" class="form-control" />
                                                 </div>
                                             </div><!-- form-group -->
                     
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label">ISBN</label>
+                                                <label class="col-sm-4 control-label">I.S.B.N</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" placeholder="ISBN" class="form-control">
+                                                    <input type="text" placeholder="Número de ISBN" class="form-control">
                                                     <span class="help-block">
-                                                    <div>
-												<div class="clearfix">
-													<div class="pull-left">
-														<a href="/" class="btn btn-info btn-block">
-															<i class="fa fa-angle-left mr5"></i> Voltar
-														</a>
-													</div>
-													<div class="pull-right">
-														<button type="submit" class="btn btn-success">Salvar <i class="fa fa-angle-right ml5"></i></button>
-													</div>
-												</div>
+                                                    <div>                                                 
+                                                    </div><!--form-group -->
+                                                    <div class = "panel-footer">
+                                                    <button type= "submit" class="btn btn-success">Salvar </button>
+										            <button type= "reset" class="btn btn-success">Reset </button>
+										            <button type= "submit" class="btn btn-success">Voltar </button>
+										            </div>									        
+										        
 												</form>
-                                            </div><!-- form-group -->
+                                        
                     
                                            
 
