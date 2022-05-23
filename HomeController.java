@@ -23,9 +23,9 @@ public class HomeController {
 
 		return "signin";
 	}
-
-	@PostMapping("/dashboard")
-	public String dashboard(HttpServletRequest request,Model model) {
+	
+	@PostMapping("/process_login")
+	public String process_login(HttpServletRequest request,Model model) {
 		String Usuario = request.getParameter("Usuario");
 		String Senha = request.getParameter("Senha");
 		
@@ -41,9 +41,17 @@ public class HomeController {
 		else {
 			model.addAttribute("mensagem", "Senha inválida");
 			return "erro";
+	}
+}
+	
+
+	@PostMapping("/dashboard")
+	public String dashboard(HttpServletRequest request,Model model) {
+
+			return "dashboard";
 			
 		}
-	}
+	
 
 	@GetMapping("/signup")
 	public String cadastro() {
